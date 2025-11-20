@@ -3,6 +3,7 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const clearAllTaskBtn = document.getElementById("clearAllTaskBtn");
 
 let tasks = [];
 
@@ -36,7 +37,13 @@ function clearCompletedTasks() {
     displayTasks();
 }
 
+function clearAllTask() {
+    tasks = []; // Reset the task list by assigning a new empty array.
+    displayTasks();
+}
+
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllTaskBtn.addEventListener("click", clearAllTask)
 
 displayTasks();
