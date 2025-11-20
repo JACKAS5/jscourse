@@ -11,9 +11,20 @@ function displayCount() {
 }
 
 function checkCountValue() {
-    if (count === 10) {
+    if (count < 0) {
+        alert("No more follower to unfollow");
+    }
+    else if (count === 10) {
         alert("Your Instagram post gained 10 follwers! Congratulations!");
     } else if (count === 20) {
         alter("Your Instagram post gained 20 followers! Keep it up!");
     }
+}
+
+function decreaseCount() {
+    if (count >= 1) {
+        count--;
+    } 
+    displayCount();
+    checkCountValue();
 }
